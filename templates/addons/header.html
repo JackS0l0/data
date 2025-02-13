@@ -1,0 +1,18 @@
+{% load static %}
+<header>
+    <div class="headSlider">
+        {% for wall in headerwall %}
+            <div><img src="{{wall.img}}" alt=""></div>
+        {% endfor %}
+    </div>
+    <div class="headText">
+        <span>
+            <p class="float1">Empowering Businesses  </p>
+            <p class="float2">with</p>
+            <p class="float3">Smart Data Solutions</p>
+        </span>
+        <span>
+            <a href="#main" class="discovery">Discovery</a>
+        </span>
+    </div>
+</header>

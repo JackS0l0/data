@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    {% include 'addons/header.html' %}
+    <main id="main">
+        <div class="blogHead">
+            <p>Services</p>
+            <div class="line"></div>
+        </div>
+        <div class="carsBlock">
+            {% for service in services %}
+                <div class="cardbox">
+                    <div class="folder">
+                        <img src="{% static 'media/f1.png' %}">
+                        <div class="seemore">
+                            <a href="{% url 'post' service.slug %}">See more</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="name">{{service.name}}</p>
+                        <p class="desc">{{service.mini_desc}}</p>
+                    </div>
+                    <div class="cardlogo">
+                        <img src="{% static 'media/logo.png' %}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="blogHead">
+            <p>Projects</p>
+            <div class="line"></div>
+        </div>
+        <div class="projectBlock">
+            {% for project in projects %}
+                <div>
+                    <div class="projectBox">
+                        <a href="{% url 'index' %}"><img src="{{project.img}}"></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="blogHead">
+            <p>Customer reviews</p>
+            <div class="line"></div>
+        </div>
+        <div class="reviewsBlock">
+            <div class="reviewBox">
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
+                </div>
+                <div class="customer">
+                    <a href="#">Chūkyō Television Broadcasting</a>
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
+                </div>
+            </div>
+            <!-- ------------------------------------ -->
+            <div class="reviewBox">
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
+                </div>
+                <div class="customer">
+                    <a href="#">Chūkyō Television Broadcasting</a>
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
+                </div>
+            </div>
+            <div class="reviewBox">
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
+                </div>
+                <div class="customer">
+                    <a href="#">Chūkyō Television Broadcasting</a>
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
+                </div>
+            </div>
+            <!-- ------------------------------------ -->
+        </div>
+        <div class="blogHead">
+            <p>Blog</p>
+            <div class="line"></div>
+        </div>
+        <div class="bigBlog">
+            <a href="#" class="img">
+                <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+            </a>
+            <div class="info">
+                <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                <p class="desc">Həyatın ironiyası və ya həmişə təmizlikdə adlı sovet filmi var.</p>
+            </div>
+        </div>
+        <div class="blogsBlock">
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <!-- -------------------------------- -->
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <div class="blogBox">
+                <a href="#" class="img">
+                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
+                </a>
+                <div class="info">
+                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+                </div>
+            </div>
+            <!-- -------------------------------- -->
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Triodion&family=Yanone+Kaffeesatz:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+body {
+  font-family: "Triodion", serif;
+  font-size: 1.2vw;
+  background: rgb(144, 174, 173);
+  background: linear-gradient(180deg, rgb(144, 174, 173) 0%, rgb(251, 233, 208) 100%);
+  background-attachment: fixed;
+}
+body p {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+}
+body .navbarBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vw 5vw;
+}
+body .navbarBlock a {
+  font-size: 1.4vw;
+  color: #244855;
+}
+body .navbarBlock span {
+  display: flex;
+  align-items: center;
+}
+body .navbarBlock span .logo img {
+  width: 5vw;
+}
+body .navbarBlock span .left {
+  margin-left: 1vw;
+}
+body .navbarBlock span .contact {
+  background: #244855;
+  border-radius: 0.5vw;
+  padding: 0.5vw 1vw;
+  color: white;
+}
+body header {
+  position: relative;
+}
+body header .headSlider div img {
+  width: 100%;
+  height: 89.25vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(20%);
+}
+body header .headText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  color: white;
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+body header .headText span {
+  text-align: center;
+}
+body header .headText span .float2 {
+  font-size: 5vw;
+  margin: 1vw 0;
+}
+body header .headText span .discovery {
+  background-color: #244855;
+  color: white;
+  font-size: 1.5vw;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  margin-top: 15vw;
+}
+body main {
+  min-height: 100vh;
+  padding-top: 3vw;
+}
+body main .blogHead {
+  margin: 2vw 5vw;
+  font-size: 1.6vw;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+}
+body main .blogHead p {
+  margin-right: 1vw;
+  white-space: nowrap;
+}
+body main .blogHead .line {
+  border-bottom: 0.1vw solid #244855;
+  width: 100%;
+}
+body main .carsBlock {
+  margin: 2vw 5vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 2vw;
+  justify-content: space-between;
+}
+body main .carsBlock .cardbox {
+  position: relative;
+  width: 27vw;
+  background-color: #244855;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  transition: 5s;
+}
+body main .carsBlock .cardbox .folder {
+  position: relative;
+  margin: 0.5vw;
+  transition: 5s;
+}
+body main .carsBlock .cardbox .folder img {
+  width: 100%;
+  height: 100%;
+}
+body main .carsBlock .cardbox .folder .seemore {
+  top: 1vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease, visibility 0.1s ease;
+  transition: 5s;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+body main .carsBlock .cardbox .folder .seemore a {
+  font-size: 3.5vw;
+  color: #244855;
+  border: 0.1vw solid #244855;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  transition: 5s;
+}
+body main .carsBlock .cardbox .info {
+  color: #fbe9d0;
+  text-align: center;
+  padding: 0.5vw;
+}
+body main .carsBlock .cardbox .info .name {
+  font-size: 1.6vw;
+}
+body main .carsBlock .cardbox .cardlogo {
+  position: absolute;
+  top: 1vw;
+}
+body main .carsBlock .cardbox .cardlogo img {
+  width: 4vw;
+}
+body main .carsBlock .cardbox:hover .folder .seemore {
+  opacity: 1;
+  visibility: visible;
+}
+body main .projectBlock {
+  margin: 2vw 5vw;
+}
+body main .projectBlock div .projectBox {
+  width: 20vw;
+  height: 20vw;
+}
+body main .projectBlock div .projectBox a img {
+  padding: 0.5vw;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .reviewsBlock {
+  margin: 2vw 5vw;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 2vw;
+}
+body main .reviewsBlock .reviewBox {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5vw;
+}
+body main .reviewsBlock .reviewBox .review {
+  padding-bottom: 0.5vw;
+}
+body main .reviewsBlock .reviewBox .customer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.5vw;
+}
+body main .reviewsBlock .reviewBox .customer a {
+  color: #244855;
+  margin-right: 1vw;
+}
+body main .reviewsBlock .reviewBox .customer img {
+  width: 5vw;
+}
+body main .bigBlog {
+  margin: 2vw 5vw;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1vw;
+}
+body main .bigBlog .img img {
+  width: 100%;
+  height: 30vw;
+  border-radius: 1vw 1vw 0 0;
+}
+body main .bigBlog .info {
+  display: flex;
+  padding: 0.5vw;
+  margin-top: 1vw;
+  flex-direction: column;
+}
+body main .bigBlog .info .name {
+  font-size: 2vw;
+  color: #244855;
+  transition: 1s;
+}
+body main .bigBlog:hover .info .name {
+  color: #e64833;
+}
+body main .blogsBlock {
+  margin: 2vw 5vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  row-gap: 2vw;
+}
+body main .blogsBlock .blogBox {
+  width: 27vw;
+  height: 33vw;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+body main .blogsBlock .blogBox .img img {
+  width: 100%;
+  height: 27vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .blogsBlock .blogBox .info {
+  padding: 0.5vw;
+}
+body main .blogsBlock .blogBox .info .name {
+  color: #244855;
+  font-size: 1.5vw;
+  transition: 1s;
+}
+body main .blogsBlock .blogBox:hover .info .name {
+  color: #e64833;
+}
+
+@media only screen and (max-width: 1000px) {
+  body .navbarBlock {
+    display: none;
+  }
+  body header {
+    height: 100vh;
+  }
+  body header .headSlider div img {
+    height: 100vh;
+  }
+  body header .headText {
+    font-size: 7vw;
+    justify-content: space-around;
+  }
+  body header .headText span .float2 {
+    font-size: 12vw;
+  }
+  body header .headText span .discovery {
+    font-size: 9vw;
+    margin: 0;
+    padding: 2vw 7vw;
+    border-radius: 3vw;
+  }
+  body main .carsBlock {
+    grid-template-columns: auto;
+  }
+  body main .carsBlock .cardbox {
+    width: 100%;
+  }
+  body main .carsBlock .cardbox .info .name {
+    font-size: 4vw;
+  }
+  body main .carsBlock .cardbox .info .desc {
+    font-size: 2vw;
+  }
+  body main .projectBlock div .projectBox {
+    width: 100%;
+    height: 90vw;
+  }
+  body main .reviewBox .review {
+    font-size: 3vw;
+  }
+}/*# sourceMappingURL=style.css.map */

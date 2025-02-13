@@ -1,0 +1,17 @@
+{% load static %}
+<div class="navbarBlock">
+    <span>
+        <a href="{% url 'index' %}" class="logo">
+            <img src="{% static 'media/logo.png' %}" alt="logo">
+        </a>
+    </span>
+    <span class="vebnav">
+        <a href="{% url 'index' %}" class="left">Services</a>
+        <a href="{% url 'index' %}" class="left">Projects</a>
+        <a href="{% url 'index' %}" class="left">Blog</a>
+        <a href="{% url 'index' %}" class="left">About us</a>
+        <a href="{% url 'index' %}" class="left soicalicon"><i class="bi bi-whatsapp"></i></a>
+        <a href="{% url 'index' %}" class="left soicalicon"><i class="bi bi-linkedin"></i></a>
+        <a href="{% url 'index' %}" class="left contact">Contact</a>
+    </span>
+</div>
