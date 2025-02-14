@@ -98,6 +98,9 @@ body{
     main{
         min-height: 100vh;
         padding-top: 3vw;
+        .postPage{
+            margin: 2vw 5vw;
+        }
         .blogHead{
             margin: 2vw 5vw;
             font-size: 1.6vw;

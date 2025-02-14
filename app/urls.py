@@ -10,5 +10,5 @@ urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('',mainviews.index,name='index'),
-    path('service/<str:slug>/',contentsviews.ProjectsDetailView.as_view(),name='post'),
+    path('service/<str:slug>/',contentsviews.ServicesDetailView.as_view(),name='post'),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
