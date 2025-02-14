@@ -26,6 +26,50 @@ body{
     background: rgb(144,174,173);
     background: linear-gradient(180deg, rgba(144,174,173,1) 0%, rgba(251,233,208,1) 100%);
     background-attachment: fixed;
+    .mobNavbarBlock{
+        display: grid;
+        position: fixed;
+        background: $color1;
+        z-index: 9999;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1vw 5vw;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        gap: 1vw;
+        span{
+            display: flex;
+            align-items: center;
+            width: 30vw;
+            a{
+                font-size: 5vw;
+                color: $color5;
+                white-space: nowrap;
+            }
+            .logo{
+                img{
+                    width: 15vw;
+                }
+            }
+            .link{
+                img{
+                    width: 8vw;
+                }
+            }
+        }
+        span:first-child{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 0.5vw;
+        }
+        span:last-child{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 0.5vw;
+        }
+    }
     .navbarBlock{
         display: flex;
         justify-content: space-between;
@@ -347,6 +391,9 @@ body{
 }
 @media only screen and (min-width:1001px) {
     body{
+        .mobNavbarBlock{
+            display: none;
+        }
         main{
             .serviceBlockForMob{
                 display: none;

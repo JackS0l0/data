@@ -24,6 +24,46 @@ body p {
 body a {
   text-decoration: none;
 }
+body .mobNavbarBlock {
+  display: grid;
+  position: fixed;
+  background: #244855;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1vw 5vw;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 1vw;
+}
+body .mobNavbarBlock span {
+  display: flex;
+  align-items: center;
+  width: 30vw;
+}
+body .mobNavbarBlock span a {
+  font-size: 5vw;
+  color: #fbe9d0;
+  white-space: nowrap;
+}
+body .mobNavbarBlock span .logo img {
+  width: 15vw;
+}
+body .mobNavbarBlock span .link img {
+  width: 8vw;
+}
+body .mobNavbarBlock span:first-child {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.5vw;
+}
+body .mobNavbarBlock span:last-child {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5vw;
+}
 body .navbarBlock {
   display: flex;
   justify-content: space-between;
@@ -317,6 +357,9 @@ body main .blogsBlock .blogBox:hover .info .name {
 }
 
 @media only screen and (min-width: 1001px) {
+  body .mobNavbarBlock {
+    display: none;
+  }
   body main .serviceBlockForMob {
     display: none;
   }
