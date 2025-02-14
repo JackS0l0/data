@@ -40,9 +40,11 @@ body{
         align-items: center;
         gap: 1vw;
         span{
-            display: flex;
-            align-items: center;
+            gap: 0.5vw;
             width: 30vw;
+            display: grid;
+            align-items: center;
+            grid-template-columns: auto auto auto;
             a{
                 font-size: 5vw;
                 color: $color5;
@@ -58,16 +60,6 @@ body{
                     width: 8vw;
                 }
             }
-        }
-        span:first-child{
-            display: grid;
-            grid-template-columns: auto auto auto;
-            gap: 0.5vw;
-        }
-        span:last-child{
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 0.5vw;
         }
     }
     .navbarBlock{

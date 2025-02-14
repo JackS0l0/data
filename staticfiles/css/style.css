@@ -39,9 +39,11 @@ body .mobNavbarBlock {
   gap: 1vw;
 }
 body .mobNavbarBlock span {
-  display: flex;
-  align-items: center;
+  gap: 0.5vw;
   width: 30vw;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto;
 }
 body .mobNavbarBlock span a {
   font-size: 5vw;
@@ -53,16 +55,6 @@ body .mobNavbarBlock span .logo img {
 }
 body .mobNavbarBlock span .link img {
   width: 8vw;
-}
-body .mobNavbarBlock span:first-child {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 0.5vw;
-}
-body .mobNavbarBlock span:last-child {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.5vw;
 }
 body .navbarBlock {
   display: flex;
