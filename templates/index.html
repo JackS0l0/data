@@ -13,7 +13,7 @@
                     <div class="folder">
                         <img src="{% static 'media/f1.png' %}">
                         <div class="seemore">
-                            <a href="{% url 'post' service.slug %}">See more</a>
+                            <a href="{% url 'post_service' service.slug %}">See more</a>
                         </div>
                     </div>
                     <div class="info">
@@ -34,7 +34,7 @@
             {% for project in projects %}
                 <div>
                     <div class="projectBox">
-                        <a href="{% url 'index' %}"><img src="{{project.img}}"></a>
+                        <a href="{% url 'post_project' project.slug %}"><img src="{{project.img}}"></a>
                     </div>
                 </div>
             {% endfor %}
