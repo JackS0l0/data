@@ -26,6 +26,25 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="serviceBlockForMob">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                {% for service in services %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{service.id}}" aria-expanded="false" aria-controls="flush-collapseOne">{{service.name}}</button>
+                        </h2>
+                        <div id="flush-collapseOne{{service.id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>{{service.mini_desc}}</p>
+                                <div class="btnsm">
+                                    <a href="{% url 'post_service' service.slug %}" class="seemore">See more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
         <div class="blogHead">
             <p>Projects</p>
             <div class="line"></div>

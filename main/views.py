@@ -5,8 +5,8 @@ def index(request):
     data=common_data()
     context={
         'title':'Home',
-        'services':Services.objects.all().order_by('-date'),
-        'projects':Projects.objects.all().order_by('-date'),
+        'services':Services.objects.all().order_by('-date')[0:6],
+        'projects':Projects.objects.all().order_by('-date')[0:6],
     }
     data.update(context)
     return render(request, 'index.html',data)

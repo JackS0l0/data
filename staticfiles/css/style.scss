@@ -98,6 +98,32 @@ body{
     main{
         min-height: 100vh;
         padding-top: 3vw;
+        .serviceBlockForMob{
+            margin: 2vw 5vw;
+            .accordion{
+                .accordion-item{
+                    background: none;
+                    .accordion-header{
+                        .accordion-button{
+                            background: none;
+                            font-size: 6vw;
+                        }
+                    }
+                }
+                .accordion-collapse{
+                    font-size: 4vw;
+                    .accordion-body{
+                        .btnsm{
+                            display: flex;
+                            justify-content: flex-end;
+                            .seemore{
+                                color: $color1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .postPage{
             margin: 2vw 5vw;
         }
@@ -320,7 +346,13 @@ body{
     }
 }
 @media only screen and (min-width:1001px) {
-
+    body{
+        main{
+            .serviceBlockForMob{
+                display: none;
+            }
+        }
+    }
 }
 @media only screen and (max-width:1000px) {
     body{
@@ -353,28 +385,11 @@ body{
             }
         }
         main{
+            .blogHead{
+                font-size: 4vw;
+            }
             .carsBlock{
-                grid-template-columns: auto;
-                .cardbox{
-                    width: 100%;
-                    .cardlogo{
-                        top: 4vw;
-                        img{
-                            width: 16vw;
-                        }
-                    }
-                    .folder{
-                        margin: 6vw 6vw 1vw 6vw;
-                    }
-                    .info{
-                        .name{
-                            font-size: 7vw;
-                        }
-                        .desc{
-                            font-size: 4vw;
-                        }
-                    }
-                }
+                display: none;
             }
             .projectBlock{
                 div{

@@ -92,6 +92,26 @@ body main {
   min-height: 100vh;
   padding-top: 3vw;
 }
+body main .serviceBlockForMob {
+  margin: 2vw 5vw;
+}
+body main .serviceBlockForMob .accordion .accordion-item {
+  background: none;
+}
+body main .serviceBlockForMob .accordion .accordion-item .accordion-header .accordion-button {
+  background: none;
+  font-size: 6vw;
+}
+body main .serviceBlockForMob .accordion .accordion-collapse {
+  font-size: 4vw;
+}
+body main .serviceBlockForMob .accordion .accordion-collapse .accordion-body .btnsm {
+  display: flex;
+  justify-content: flex-end;
+}
+body main .serviceBlockForMob .accordion .accordion-collapse .accordion-body .btnsm .seemore {
+  color: #244855;
+}
 body main .postPage {
   margin: 2vw 5vw;
 }
@@ -296,6 +316,11 @@ body main .blogsBlock .blogBox:hover .info .name {
   color: #e64833;
 }
 
+@media only screen and (min-width: 1001px) {
+  body main .serviceBlockForMob {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1000px) {
   body .navbarBlock {
     display: none;
@@ -319,26 +344,11 @@ body main .blogsBlock .blogBox:hover .info .name {
     padding: 2vw 7vw;
     border-radius: 3vw;
   }
-  body main .carsBlock {
-    grid-template-columns: auto;
-  }
-  body main .carsBlock .cardbox {
-    width: 100%;
-  }
-  body main .carsBlock .cardbox .cardlogo {
-    top: 4vw;
-  }
-  body main .carsBlock .cardbox .cardlogo img {
-    width: 16vw;
-  }
-  body main .carsBlock .cardbox .folder {
-    margin: 6vw 6vw 1vw 6vw;
-  }
-  body main .carsBlock .cardbox .info .name {
-    font-size: 7vw;
-  }
-  body main .carsBlock .cardbox .info .desc {
+  body main .blogHead {
     font-size: 4vw;
+  }
+  body main .carsBlock {
+    display: none;
   }
   body main .projectBlock div .projectBox {
     width: 100%;
