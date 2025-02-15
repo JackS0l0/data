@@ -3,7 +3,10 @@
 {% block main %}
     <main>
         <div class="postPage">
-            {{object.name}}
+            <p>{{object.name}}</p>
+            <p>{{object.mini_desc}}</p>
+            <hr>
+            <p>{{object.desc | safe}}</p>
         </div>
     </main>
 {% endblock %}
