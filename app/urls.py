@@ -12,4 +12,5 @@ urlpatterns = [
     path('',mainviews.index,name='index'),
     path('service/<str:slug>/',contentsviews.ServicesDetailView.as_view(),name='post_service'),
     path('project/<str:slug>/',contentsviews.ProjectsDetailView.as_view(),name='post_project'),
+    path('article/<str:slug>/',contentsviews.BlogDetailView.as_view(),name='post_blog'),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

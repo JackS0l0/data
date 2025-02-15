@@ -97,66 +97,28 @@
             <p>Blog</p>
             <div class="line"></div>
         </div>
-        <div class="bigBlog">
-            <a href="#" class="img">
-                <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-            </a>
-            <div class="info">
-                <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                <p class="desc">Həyatın ironiyası və ya həmişə təmizlikdə adlı sovet filmi var.</p>
+        {% for article in blog_big %}
+            <div class="bigBlog">
+                <a href="{% url 'post_blog' article.slug %}" class="img">
+                    <img src="{{article.img}}" alt="{{article.name}}">
+                </a>
+                <div class="info">
+                    <a href="{% url 'post_blog' article.slug %}" class="name">{{article.name}}</a>
+                    <p class="desc">{{article.mini_desc}}
+                </div>
             </div>
-        </div>
+        {% endfor %}
         <div class="blogsBlock">
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
+            {% for article in blog %}
+                <div class="blogBox">
+                    <a href="{% url 'post_blog' article.slug %}" class="img">
+                        <img src="{{article.img}}">
+                    </a>
+                    <div class="info">
+                        <a href="#" class="name">{{article.name}}</a>
+                    </div>
                 </div>
-            </div>
-            <!-- -------------------------------- -->
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                </div>
-            </div>
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                </div>
-            </div>
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                </div>
-            </div>
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                </div>
-            </div>
-            <div class="blogBox">
-                <a href="#" class="img">
-                    <img src="https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408661.jpg?semt=ais_hybrid" alt="">
-                </a>
-                <div class="info">
-                    <a href="#" class="name">Datalar üzərindən müştərilərə özəl yanaşma</a>
-                </div>
-            </div>
-            <!-- -------------------------------- -->
+            {% endfor %}
         </div>
     </main>
 {% endblock %}

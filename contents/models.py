@@ -24,3 +24,15 @@ class Projects(models.Model):
     class Meta:
         verbose_name = 'Project'
         verbose_name_plural = 'Projects'
+class Blog(models.Model):
+    name=models.CharField('Name',max_length=200)
+    img=models.URLField('Photo',default='',null=True,blank=True)
+    mini_desc=models.TextField('Mini Description',default='')
+    desc=RichTextField('Description',default='')
+    date=models.DateTimeField(default=timezone.now)
+    slug=models.SlugField('Slug',default='')
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Articles'
+        verbose_name_plural = 'Blog'
