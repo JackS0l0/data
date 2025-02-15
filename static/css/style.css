@@ -357,6 +357,11 @@ body main .blogsBlock .blogBox .info .name {
 body main .blogsBlock .blogBox:hover .info .name {
   color: #e64833;
 }
+body footer {
+  background-color: #874f41;
+  padding: 2vw 5vw;
+  color: #fbe9d0;
+}
 
 @media only screen and (min-width: 1001px) {
   body .mobNavbarBlock {
@@ -367,6 +372,15 @@ body main .blogsBlock .blogBox:hover .info .name {
   }
 }
 @media only screen and (max-width: 1000px) {
+  body {
+    font-size: 4vw;
+  }
+  body a {
+    font-size: 4vw;
+  }
+  body .btn {
+    font-size: 4vw;
+  }
   body .navbarBlock {
     display: none;
   }

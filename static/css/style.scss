@@ -390,6 +390,11 @@ body{
             }
         }
     }
+    footer{
+        background-color: $color3;
+        padding: 2vw 5vw;
+        color: $color5;
+    }
 }
 @media only screen and (min-width:1001px) {
     body{
@@ -405,6 +410,13 @@ body{
 }
 @media only screen and (max-width:1000px) {
     body{
+        font-size: 4vw;
+        a{
+            font-size: 4vw;
+        }
+        .btn{
+            font-size: 4vw;
+        }
         .navbarBlock{
             display: none;
         }
