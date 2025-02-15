@@ -1,6 +1,6 @@
 {% load static %}
 <div class="mobNavbarBlock">
-    <span>
+    <span class="links">
         <a href="{% url 'index' %}" class="link"><img src="{% static 'media/serv.png' %}"></a>
         <a href="{% url 'index' %}" class="link"><img src="{% static 'media/proj.png' %}"></a>
         <a href="{% url 'index' %}" class="link"><img src="{% static 'media/blog.png' %}"></a>
@@ -8,9 +8,15 @@
     <span>
         <a href="{% url 'index' %}" class="logo"><img src="{% static 'media/logo.png' %}"></a>
     </span>
-    <span>
+    <span class="links">
         <a href="{% url 'index' %}" class="link"><img src="{% static 'media/info.png' %}"></a>
         <a href="{% url 'index' %}" class="link"><img src="{% static 'media/cont.png' %}"></a>
-        <a href="{% url 'index' %}" class="link"><img src="{% static 'media/cont.png' %}"></a>
+        <button class="link" onclick="topFunction()"><img src="{% static 'media/up.png' %}"></button>
+        <script>
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
     </span>
 </div>

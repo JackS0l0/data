@@ -40,11 +40,10 @@ body{
         align-items: center;
         gap: 1vw;
         span{
-            gap: 0.5vw;
             width: 30vw;
-            display: grid;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            grid-template-columns: auto auto auto;
             a{
                 font-size: 5vw;
                 color: $color5;
@@ -59,6 +58,17 @@ body{
                 img{
                     width: 8vw;
                 }
+            }
+        }
+        .links{
+            display: grid;
+            align-items: center;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            gap: 1vw;
+            button{
+                background: none;
+                border: 0;
             }
         }
     }
