@@ -36,3 +36,12 @@ class Blog(models.Model):
     class Meta:
         verbose_name = 'Articles'
         verbose_name_plural = 'Blog'
+class Reviews(models.Model):
+    partner=models.ForeignKey(to=Projects,on_delete=models.CASCADE,verbose_name='Partner name',default=1)
+    desc=models.TextField('Review',default='')
+    date=models.DateTimeField(default=timezone.now)
+    def __str__(self):
+        return f'Partner {self.id}'
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'

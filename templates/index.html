@@ -63,35 +63,17 @@
             <div class="line"></div>
         </div>
         <div class="reviewsBlock">
-            <div class="reviewBox">
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
+            {% for review in reviews %}
+                <div class="reviewBox">
+                    <div class="review">
+                        <p>{{review.desc}}</p>
+                    </div>
+                    <div class="customer">
+                        <a href="{% url 'post_project' review.partner.slug %}">{{review.partner.name}}</a>
+                        <a href="{% url 'post_project' review.partner.slug %}"><img src="{{review.partner.img}}"></a>
+                    </div>
                 </div>
-                <div class="customer">
-                    <a href="#">Chūkyō Television Broadcasting</a>
-                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
-                </div>
-            </div>
-            <!-- ------------------------------------ -->
-            <div class="reviewBox">
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
-                </div>
-                <div class="customer">
-                    <a href="#">Chūkyō Television Broadcasting</a>
-                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
-                </div>
-            </div>
-            <div class="reviewBox">
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, quo quaerat omnis quae nesciunt. Vitae eos maxime reprehenderit, minima mollitia fuga maiores impedit nesciunt dolorum! Quia, alias. Sint, vitae.</p>
-                </div>
-                <div class="customer">
-                    <a href="#">Chūkyō Television Broadcasting</a>
-                    <img src="https://static.wikia.nocookie.net/logopedia/images/0/04/ChukyoTV_2016logo_alt.svg/revision/latest?cb=20240709070334" alt="">
-                </div>
-            </div>
-            <!-- ------------------------------------ -->
+            {% endfor %}
         </div>
         <div class="blogHead">
             <p>Blog</p>
@@ -100,7 +82,7 @@
         {% for article in blog_big %}
             <div class="bigBlog">
                 <a href="{% url 'post_blog' article.slug %}" class="img">
-                    <img src="{{article.img}}" alt="{{article.name}}">
+                    <img src="{{article.img}}">
                 </a>
                 <div class="info">
                     <a href="{% url 'post_blog' article.slug %}" class="name">{{article.name}}</a>
