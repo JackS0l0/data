@@ -199,10 +199,12 @@ body main .postPage .share {
 }
 body main .postPage .share .shareOn {
   font-weight: bold;
+  white-space: nowrap;
 }
 body main .postPage .share a {
-  margin: 0 0.5vw;
+  margin: 0 1vw;
   color: #244855;
+  white-space: nowrap;
 }
 body main .blogHead {
   margin: 2vw 5vw;

@@ -214,10 +214,12 @@ body{
                 justify-content: center;
                 .shareOn{
                     font-weight: bold;
+                    white-space: nowrap;
                 }
                 a{
-                    margin: 0 0.5vw;
+                    margin: 0 1vw;
                     color: $color1;
+                    white-space: nowrap;
                 }
             }
         }
