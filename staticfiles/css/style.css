@@ -456,6 +456,36 @@ body footer {
   body main .carsBlock {
     display: none;
   }
+  body main .projectList {
+    grid-template-columns: auto auto auto;
+  }
+  body main .projectList .projectBox {
+    width: 28vw;
+    height: 28vw;
+  }
+  body main .projectList .projectBox a img {
+    width: 28vw;
+    height: 28vw;
+  }
+  body main .serviceBlock {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  body main .serviceBlock .cardbox {
+    width: 90vw;
+  }
+  body main .serviceBlock .cardbox .info .name {
+    font-size: 6vw;
+  }
+  body main .serviceBlock .cardbox .folder {
+    margin: 5vw 5vw 0 5vw;
+  }
+  body main .serviceBlock .cardbox .cardlogo {
+    top: 3vw;
+  }
+  body main .serviceBlock .cardbox .cardlogo img {
+    width: 12vw;
+  }
   body main .projectBlock div .projectBox {
     width: 100%;
     height: 90vw;
@@ -485,7 +515,7 @@ body footer {
     height: 100vw;
   }
   body main .blogsBlock .blogBox .img img {
-    height: 90vw;
+    height: 80vw;
   }
   body main .blogsBlock .blogBox .info .name {
     font-size: 4vw;
