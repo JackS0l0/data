@@ -450,6 +450,9 @@ body footer {
     padding: 2vw 7vw;
     border-radius: 3vw;
   }
+  body main {
+    padding: 3vw 0 10vw 0;
+  }
   body main .blogHead {
     font-size: 4vw;
   }
