@@ -170,8 +170,31 @@ body{
                 }
             }
         }
+        .navlinks{
+            margin: 0 10vw;
+            a{
+                color: $color1;
+            }
+        }
         .postPage{
-            margin: 2vw 5vw;
+            margin: 2vw 10vw;
+            .name{
+                font-size: 3vw;
+            }
+            .date{
+                text-align: end;
+            }
+            .share{
+                display: flex;
+                justify-content: center;
+                .shareOn{
+                    font-weight: bold;
+                }
+                a{
+                    margin: 0 0.5vw;
+                    color: $color1;
+                }
+            }
         }
         .blogHead{
             margin: 2vw 5vw;

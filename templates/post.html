@@ -2,11 +2,36 @@
 {% load static %}
 {% block main %}
     <main>
+        <div class="navlinks">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    {% if request.resolver_match.url_name == 'post_service' %}
+                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Services</a></li>
+                    {% endif  %}
+                    {% if request.resolver_match.url_name == 'post_blog' %}
+                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Blog</a></li>
+                    {% endif  %}
+                    {% if request.resolver_match.url_name == 'post_project' %}
+                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Projects</a></li>
+                    {% endif  %}
+                    <li class="breadcrumb-item active" aria-current="page">{{object.name}}</li>
+                </ol>
+            </nav>
+        </div>
         <div class="postPage">
-            <p>{{object.name}}</p>
+            <p class="name">{{object.name}}</p>
             <p>{{object.mini_desc}}</p>
             <hr>
             <p>{{object.desc | safe}}</p>
+            <p class="date">{{object.date | date:"d F, Y"}}</p>
+            <div class="share">
+                <p class="shareOn"><i class="bi bi-share-fill"></i> Share on:</p>
+                <a href="#" class="socialLink">Facebook</a>
+                <a href="#" class="socialLink">Twitter</a>
+                <a href="#" class="socialLink">Linkedin</a>
+                <a href="#" class="socialLink">Copy link</a>
+            </div>
         </div>
     </main>
 {% endblock %}

@@ -154,8 +154,31 @@ body main .serviceBlockForMob .accordion .accordion-collapse .accordion-body .bt
 body main .serviceBlockForMob .accordion .accordion-collapse .accordion-body .btnsm .seemore {
   color: #244855;
 }
+body main .navlinks {
+  margin: 0 10vw;
+}
+body main .navlinks a {
+  color: #244855;
+}
 body main .postPage {
-  margin: 2vw 5vw;
+  margin: 2vw 10vw;
+}
+body main .postPage .name {
+  font-size: 3vw;
+}
+body main .postPage .date {
+  text-align: end;
+}
+body main .postPage .share {
+  display: flex;
+  justify-content: center;
+}
+body main .postPage .share .shareOn {
+  font-weight: bold;
+}
+body main .postPage .share a {
+  margin: 0 0.5vw;
+  color: #244855;
 }
 body main .blogHead {
   margin: 2vw 5vw;
