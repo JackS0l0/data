@@ -134,6 +134,30 @@ body main {
   min-height: 100vh;
   padding-top: 3vw;
 }
+body main .projectList {
+  margin: 2vw 5vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  gap: 2vw;
+}
+body main .projectList .projectBox {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 20vw;
+  height: 20vw;
+}
+body main .projectList .projectBox a img {
+  width: 20vw;
+  height: 20vw;
+  padding: 1vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 body main .serviceBlockForMob {
   margin: 2vw 5vw;
 }
@@ -155,7 +179,7 @@ body main .serviceBlockForMob .accordion .accordion-collapse .accordion-body .bt
   color: #244855;
 }
 body main .navlinks {
-  margin: 0 10vw;
+  margin: 0 5vw;
 }
 body main .navlinks a {
   color: #244855;

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <main>
+        <div class="navlinks">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    {% if request.resolver_match.url_name == 'list_services' %}
+                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    {% endif  %}
+                    {% if request.resolver_match.url_name == 'list_projects' %}
+                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                    {% endif  %}
+                    {% if request.resolver_match.url_name == 'list_blog' %}
+                        <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                    {% endif  %}
+                </ol>
+            </nav>
+        </div>
+        <!--  -->
+        <div class="carsBlock">
+            {% for service in services %}
+                <div class="cardbox">
+                    <div class="folder">
+                        <img src="{% static 'media/f1.png' %}">
+                        <div class="seemore">
+                            <a href="{% url 'post_service' service.slug %}">See more</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="name">{{service.name}}</p>
+                        <p class="desc">{{service.mini_desc}}</p>
+                    </div>
+                    <div class="cardlogo">
+                        <img src="{% static 'media/logo.png' %}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!--  -->
+        <div class="blogsBlock">
+            {% for article in blog %}
+                <div class="blogBox">
+                    <a href="{% url 'post_blog' article.slug %}" class="img">
+                        <img src="{{article.img}}">
+                    </a>
+                    <div class="info">
+                        <a href="#" class="name">{{article.name}}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!--  -->
+        <div class="projectList">
+            {% for project in projects %}
+                <div class="projectBox">
+                    <a href="{% url 'post_project' project.slug %}"><img src="{{project.img}}"></a>
+                </div>
+            {% endfor %}
+        </div>
+        <!--  -->
+        <div class="pagiBlock">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page=1"><i class="bi bi-chevron-bar-left"></i></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="bi bi-chevron-left"></i></a>
+                        </li>
+                    {% endif %}
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num >= page_obj.number|add:-2 and num <= page_obj.number|add:2 %}
+                            <li class="page-item {% if num == page_obj.number %}active{% endif %}">
+                                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="bi bi-chevron-right"></i></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ paginator.num_pages }}"><i class="bi bi-chevron-bar-right"></i></a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </main>
+{% endblock %}

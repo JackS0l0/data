@@ -144,6 +144,31 @@ body{
     main{
         min-height: 100vh;
         padding-top: 3vw;
+        .projectList{
+            margin: 2vw 5vw;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-between;
+            gap: 2vw;
+            .projectBox{
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 1vw;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                width: 20vw;
+                height: 20vw;
+                a{
+                    img{
+                        width: 20vw;
+                        height: 20vw;
+                        padding: 1vw;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
         .serviceBlockForMob{
             margin: 2vw 5vw;
             .accordion{
@@ -171,7 +196,7 @@ body{
             }
         }
         .navlinks{
-            margin: 0 10vw;
+            margin: 0 5vw;
             a{
                 color: $color1;
             }
