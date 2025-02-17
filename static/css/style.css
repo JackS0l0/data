@@ -18,6 +18,16 @@ body {
   background: linear-gradient(180deg, rgb(144, 174, 173) 0%, rgb(251, 233, 208) 100%);
   background-attachment: fixed;
 }
+body .img-circle {
+  box-shadow: none;
+  border-radius: 0;
+}
+body .elevation-3 {
+  box-shadow: none !important;
+}
+body .login-box .login-logo h1 picture img {
+  width: 20vw;
+}
 body p {
   margin: 0;
 }

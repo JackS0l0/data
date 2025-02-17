@@ -15,6 +15,24 @@ html{
     margin: auto;
 }
 body{
+    .img-circle{
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .elevation-3{
+        box-shadow: none !important;
+    }
+    .login-box{
+        .login-logo{
+            h1{
+                picture{
+                    img{
+                        width: 20vw;
+                    }
+                }
+            }
+        }
+    }
     font-family: "Triodion", serif;
     p{
         margin: 0;
