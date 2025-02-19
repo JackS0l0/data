@@ -3,6 +3,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(v=n27d&4ix2)zi0j*85h+h@d_4!+k@(006az8s+ct#398gs&6'
 DEBUG = True
 ALLOWED_HOSTS = ["*","vercel.app"]
+X_FRAME_OPTIONS = 'ALLOWALL'
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
